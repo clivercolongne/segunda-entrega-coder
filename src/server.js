@@ -8,8 +8,16 @@ import {
 
 const app = express()
 
+var admin = require("firebase-admin");
 
-const ISADMIN = true
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+
+const CLIVERCITO = true
 
 const errorProductoSinStock = {'error':'producto sin stock'}
 const errorProductoNoExiste = {'error':'producto no existe'}
@@ -152,7 +160,7 @@ app.use(function(req,res,next) {
 
 //Middleware de seguridad
 function mwAdmin(req,res,next){
-    if(ISADMIN){
+    if(CLIVERCITO){
         next()
     }else{
         const error={
