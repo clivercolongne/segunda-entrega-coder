@@ -1,4 +1,5 @@
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 import config from '../config.js'
 
 await mongoose.connect(config.mongodb.string, config.mongodb.options)

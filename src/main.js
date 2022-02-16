@@ -1,4 +1,7 @@
-import app from '../src/server.js'
+
+const express = require('express')
+
+const app = express()
 
 const PORT = 8080
 const server = app.listen(PORT, () => {

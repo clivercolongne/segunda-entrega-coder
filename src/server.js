@@ -1,10 +1,10 @@
-import express from 'express'
+const express = require('express')
 const { Router } = express
-
+// import productosDao from 
 import {
     productosDao as products,
     carritosDao as cart
-} from '../src/dao/index.js'
+} from './index.js'
 
 const app = express()
 

@@ -1,5 +1,6 @@
 
-import admin from 'firebase-admin'
+// import admin from 'firebase-admin'
+const admin = require('firebase-admin')
 import config from '../config.js'
 
 

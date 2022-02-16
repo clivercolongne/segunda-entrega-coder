@@ -1,4 +1,4 @@
-import fs from 'fs'
+const fs = require('fs')
 import config from '../config.js'
 
 const errorProducto = {'error' : 'producto no encontrado'}
