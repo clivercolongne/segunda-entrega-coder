@@ -1,6 +1,6 @@
 let productosDao
 let carritosDao
-
+process.env.DAO = "file"
 switch (process.env.DAO) {
     case 'file': 
         const {default: CarritosDaoFile } = await import('./carritos/CarritosDaoFile.js')

@@ -1,20 +1,20 @@
-const express = require('express')
+import express from 'express'
 const { Router } = express
-// import productosDao from 
+
 import {
     productosDao as products,
     carritosDao as cart
-} from './index.js'
+} from '../src/dao/index.js'
 
 const app = express()
 
-var admin = require("firebase-admin");
+// var admin = require("firebase-admin");
 
-var serviceAccount = require("path/to/serviceAccountKey.json");
+// var serviceAccount = require("path/to/serviceAccountKey.json");
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
 
 
 const CLIVERCITO = true

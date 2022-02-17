@@ -1,7 +1,7 @@
 export default {
 
     filesystem: {
-        path: process.env.PWD + '/data'
+        path: process.cwd() + '/data'
     },
 
     mongodb: {

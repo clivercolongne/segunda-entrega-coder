@@ -1,4 +1,4 @@
-const fs = require('fs')
+import * as fs from 'fs'
 import config from '../config.js'
 
 const errorProducto = {'error' : 'producto no encontrado'}
@@ -8,6 +8,7 @@ class Contenedor {
     constructor(nombreArchivo) {
         this.id = 0
         this.list = []
+        console.log("filename",`${config.filesystem.path}/${nombreArchivo}`);
         this.filename = `${config.filesystem.path}/${nombreArchivo}`
         this.init()
     }
